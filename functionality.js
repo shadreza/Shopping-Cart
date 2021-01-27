@@ -68,6 +68,11 @@ document.getElementById('prd2Discard').addEventListener('click',function(){
 })
 
 document.getElementById('checkOutButton').addEventListener('click',function(){
-    alert('Your Total Bill $'+parseFloat(document.getElementById('totalText').innerText));
+    if(parseFloat(document.getElementById('totalText').innerText)<=0){
+        alert('Nothing To Checkout!');
+    }
+    else{
+        alert('Your Total Bill $'+parseFloat(document.getElementById('totalText').innerText));
+    }
     location.reload();
 })
